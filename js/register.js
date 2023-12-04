@@ -16,7 +16,7 @@ async function loadUsers() {
         let parseStorage = await getItem('users');
         users = JSON.parse(parseStorage.data.value);
     } catch (e) {
-        console.warning('Loading error:', e);
+        console.log('not found user')
     }
 }
 
