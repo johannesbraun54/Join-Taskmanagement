@@ -30,13 +30,10 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 5%;
 }
 
 .logoStart img {
-    height: 80%;
-    padding-top: 16px;
-    padding-left: 5%;
+    height: 230px;
     width: auto;
     animation: changeLogoPosition 1s ease-in-out forwards 500ms;
 
@@ -44,11 +41,13 @@ h1 {
 
 @keyframes changeLogoPosition {
     from {
+        height: 230px;
         transform: translateX(0%) translateY(0%);
     }
 
     to {
-        transform: translateX(calc(-50vw + 50%)) translateY(calc(-432px + 30%));
+        transform: translateX(calc(-45vw + 49%)) translateY(calc(-45vh + 30%));
+        height: 84px;
     }
 }
 
@@ -561,8 +560,8 @@ h1 {
         }
 
         to {
-            transform: translateX(calc(-45vw + 50%)) translateY(calc(-45vh + 36%));
-            height: 122px;
+            transform: translateX(calc(-45vw + 50%)) translateY(calc(-45vh + 30%));
+            height: 84px;
         }
     }
 }
