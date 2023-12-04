@@ -768,6 +768,7 @@ progress::-moz-progress-bar {
 
     .rotateCard {
         max-width: 240px;
+        min-width: 230px;
     }
 
     .todoSection {
@@ -860,6 +861,10 @@ progress::-moz-progress-bar {
 
     .dialogShowCard .prio div img {
         width: 16px;
+    }
+
+    .todos {
+        width: calc(100vw - 40px);
     }
 
     .closeSection {
