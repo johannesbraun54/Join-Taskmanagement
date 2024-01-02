@@ -361,7 +361,7 @@
     height: 24px;
     width: 24px;
     border-radius: 4px;
-    display: none;
+    display: flex;
     align-items: center;
     justify-content: center;
     color: #42526E;

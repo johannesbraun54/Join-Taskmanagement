@@ -87,7 +87,7 @@ function tempRenderCreateSubtask() {
                     <img class="delNCheckHover" style="margin-right: 4px" src="./img/del.svg" alt="">
                 </div>
                 <div>
-                    <img style="height: 24px" src="./img/borderdash.svg" alt="">
+                    <img style="height: 24px" src="./img/borderDash.svg" alt="">
                 </div>
                 <div onclick="addSubtaskToList()">
                     <img class="delNCheckHover" style="margin-left: 4px" src="./img/check.svg" alt="">
@@ -102,7 +102,7 @@ function tempRenderSubtaskList(i) {
                     <img class="delNCheckHover" style="margin-right: 4px" src="./img/edit.svg" alt="">
                 </div>
                 <div>
-                    <img style="height: 24px" src="./img/borderdash.svg" alt="">
+                    <img style="height: 24px" src="./img/borderDash.svg" alt="">
                 </div>
                 <div onclick="deleteSubtask(${i})">
                     <img class="delNCheckHover" style="margin-left: 4px" src="./img/delete.svg" alt="">
@@ -115,7 +115,7 @@ function tempRenderEditDeleteContainer(position) {
                 <img class="delNCheckHover" style="margin-right: 4px" src="./img/delete.svg" alt="">
             </div>
             <div>
-                <img style="height: 24px" src="./img/borderdash.svg" alt="">
+                <img style="height: 24px" src="./img/borderDash.svg" alt="">
             </div>
             <div onclick="confirmEditSubtask(${position})">
                 <img class="delNCheckHover" style="margin-left: 4px" src="./img/check.svg" alt="">
