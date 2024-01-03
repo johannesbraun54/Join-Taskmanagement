@@ -297,15 +297,16 @@ function rotateCard(id) {
  * @param {string} idName 
  */
 function renderCardContacts(name, idName) {
+    const color = ["#ff7a00", "#ff5eb3", "#6e52ff", "#9327ff", "#00bee8", "#1fd7c1", "#ff745e", "#ffa35e", "#fc71ff", "#ffc701", "#0038ff", "#c3ff2b", "#ffe62b", "#ff4646", "#ffbb2b"];
 
-    for (let i = 0; i < contactsJson.length; i++) {
-        const color = ["#ff7a00", "#ff5eb3", "#6e52ff", "#9327ff", "#00bee8", "#1fd7c1", "#ff745e", "#ffa35e", "#fc71ff", "#ffc701", "#0038ff", "#c3ff2b", "#ffe62b", "#ff4646", "#ffbb2b"];
+    for (let i = 0; i < color.length; i++) {
         i = i % color.length;
         const avatarBg = color[i]
         contactColorsMap.set(contactsJson[i].fullName, avatarBg);
     }
 
-    let bgColor = contactColorsMap.get(name)
+
+    let bgColor = contactColorsMap.get(name);
     document.getElementById(idName).style.backgroundColor = `${bgColor}`;
 }
 
