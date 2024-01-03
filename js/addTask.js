@@ -19,6 +19,7 @@ function renderAddTask(taskStatusFromResponsive) {
     content.innerHTML = `<div class="addTaskContainer">${tempRenderAddTask()}</div>`;
     setActiveNavItem("addTask");
     taskStatus = taskStatusFromResponsive;
+    loadMediumPrio();
 }
 
 /**
@@ -309,6 +310,14 @@ function toggleDropDown() {
     } else {
         closeDropDown();
     }
+}
+
+/**
+ * selects the prio "medium" as default
+ */
+function loadMediumPrio(){
+    let editPrioMedium = document.getElementById("editPrioMediun");
+    changePrioColor(editPrioMedium, '#FFA800');
 }
 
 /**

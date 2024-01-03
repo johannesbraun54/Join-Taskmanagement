@@ -209,6 +209,7 @@ function openDialog(id, idOfSlideConti) {
         tempRenderAddTaskDiv.innerHTML = tempRenderAddTaskHTML;
         tempRenderAddTaskDiv.id = 'tempRenderAddTaskDiv';
         addTaskWindow.appendChild(tempRenderAddTaskDiv);
+        loadMediumPrio();
     }
     document.getElementById(id).classList.remove('d-none');
     slideIn(idOfSlideConti);
