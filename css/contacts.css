@@ -164,8 +164,9 @@
 }
 
 .addNewContactForm {
-    /* animation: fadein 1s; */
     display: none;
+    justify-content: center;
+    align-items: center;
     position: absolute;
     top: 0;
     left: 0;
@@ -173,15 +174,14 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 999;
+    transform: translate(220%, 0%);
+    transition: transform 250ms ease-in-out;
 }
 
 .addNewContactFormContent {
     display: flex;
     height: 592px;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }
 
 @keyframes fadein {

@@ -169,7 +169,7 @@ function slideIn(idOfSlideConti) {
 
     setTimeout(() => {
         document.getElementById(idOfSlideConti).style = 'transform: translateX(0%)';
-    }, 5)
+    }, 50)
 }
 
 /**

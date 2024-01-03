@@ -45,19 +45,29 @@ document.addEventListener('click', function(event) {
  * This function displays the form to add a new contact.
  */
 function addNewContact() {
-    document.getElementById('addNewContactForm').style.display = "block";
+    document.getElementById('addNewContactForm').style.display = "flex";
+    setTimeout(() => {
+        document.getElementById('addNewContactForm').style.transform = 'translate(0%, 0%)';
+    },50)
 }
 
 /**
  * Closes the popup form for adding or editing a contact.
  */
 function closePopup() {
+    //addNewContactForm
     let form = document.getElementById('addNewContactForm');
     let formEdit = document.getElementById('editForm');
-    if (formEdit) {
-        formEdit.style.display = "none";
+    document.getElementById('addNewContactForm').style.transform = 'translate(220%, 0%)';
+        if (formEdit) {
+            formEdit.style.transform = 'translate(220%, 0%)';
+            setTimeout(() => {
+                formEdit.style.display = "none";
+            },100);
     }
-    form.style.display = "none";
+    setTimeout(() => {
+        form.style.display = "none";
+    }, 100);
     resetInputFields();
 }
 
@@ -77,7 +87,10 @@ function doNotClose(event) {
  */
 function renderEditForm(i) {
     contactPosition = i;
-    document.getElementById('editForm').style.display = "block"
+    document.getElementById('editForm').style.display = "flex"
+    setTimeout(() => {
+        document.getElementById('editForm').style.transform = 'translate(0%, 0%)';
+    },50)
     let inputNameEdit = document.getElementById('inputNameEdit');
     let inputEmailEdit = document.getElementById('inputEmailEdit');
     let inputPhoneEdit = document.getElementById('inputPhoneEdit');
@@ -167,9 +180,10 @@ function getInitials(i) {
  */
 function setContactListImgColor(i) {
     const color = ["#ff7a00", "#ff5eb3", "#6e52ff", "#9327ff", "#00bee8", "#1fd7c1", "#ff745e", "#ffa35e", "#fc71ff", "#ffc701", "#0038ff", "#c3ff2b", "#ffe62b", "#ff4646", "#ffbb2b"];
+    let id = i;
     i = i % color.length;
     const contactColor = color[i];
-    let imgColor = document.getElementById(`contactInListImg${i}`);
+    let imgColor = document.getElementById(`contactInListImg${id}`);
     imgColor.style.backgroundColor = contactColor;
     contactColorsMap.set(contactsJson[i].fullName, contactColor);
 }

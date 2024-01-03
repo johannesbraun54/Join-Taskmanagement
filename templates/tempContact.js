@@ -36,7 +36,7 @@ function tempAddContactForm(page) {
 
 function tempEditForm() {
     return `<div class="addNewContactForm" id="editForm" onclick="closePopup()">
-                <div class="addNewContactFormContent" onclick="doNotClose(event)">
+                <div class="addNewContactFormContent"  onclick="doNotClose(event)">
                     <div class="formLeftSideContact">
                         <img src="./img/logo-white.svg" alt="">
                         <div class="formLeftSideText">
