@@ -12,7 +12,7 @@
     background-color: unset;
     top: 142px;
     right: 98.5px;
-    left: 1077.5px;
+    left: 90%;
     padding: 0px;
 }
 
@@ -35,7 +35,7 @@
 
 .paragraph {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 
 }
 
