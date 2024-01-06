@@ -8,9 +8,9 @@ let parameterWert = urlParams.get('parameter');
  */
 async function init() {
     await includeHTML();
-    loadContactsFromStorage();
+    await loadContactsFromStorage();
     initRegister();
-    loadTasksFromStorage();
+    await loadTasksFromStorage();
     if (parameterWert == 'privacyPolicy') {
         renderPrivacyPolicy();
         hideElements();

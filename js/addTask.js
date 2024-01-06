@@ -37,15 +37,15 @@ async function loadTasksFromStorage() {
 /**
  * This function loads all tasks into the storage.
  */
-function setTasksStorage() {
+async function setTasksStorage() {
     let allTasksAsString = JSON.stringify(allTasks);
-    setItem('tasks', allTasksAsString);
+    await setItem('tasks', allTasksAsString);
 }
 
 /**
  * This function creates a Task and verifies the mandatory fields.
  */
-function createTask() {
+async function createTask() {
     const elements = {
         title: document.getElementById('addTaskInputTitle'),
         description: document.getElementById('addTaskTextArea'),
@@ -76,7 +76,7 @@ function createTask() {
             subtasks: subtasksList
         };
         allTasks.push(newTask);
-        setTasksStorage();
+        await setTasksStorage();
         clearAddTask();
         renderBoard();
     }

@@ -220,8 +220,8 @@ function openDialog(id, idOfSlideConti) {
  * @param {string} id 
  * @param {string} idOfSlideConti 
  */
-function closeDialog(id, idOfSlideConti) {
-    setTasksStorage();
+async function closeDialog(id, idOfSlideConti) {
+    await setTasksStorage();
     slideOut(idOfSlideConti);
     setTimeout(() => {
         document.getElementById(id).classList.add('d-none')
@@ -270,15 +270,15 @@ function allowDrop(ev) {
  * changes the category of a task, so it can change the array 
  * @param {string} category 
  */
-function moveTo(category) {
+async function moveTo(category) {
     allTasks[currentDraggedElement]['status'] = category
-    setTasksStorage();
+    await setTasksStorage();
     renderBoard();
 }
 
-function changeStatusInPopUp(idFromTask,status){
+async function changeStatusInPopUp(idFromTask,status){
     allTasks[idFromTask]['status'] = status
-    setTasksStorage();
+    await setTasksStorage();
     renderBoard();
 }
 
@@ -299,12 +299,11 @@ function rotateCard(id) {
 function renderCardContacts(name, idName) {
     const color = ["#ff7a00", "#ff5eb3", "#6e52ff", "#9327ff", "#00bee8", "#1fd7c1", "#ff745e", "#ffa35e", "#fc71ff", "#ffc701", "#0038ff", "#c3ff2b", "#ffe62b", "#ff4646", "#ffbb2b"];
 
-    for (let i = 0; i < color.length; i++) {
-        i = i % color.length;
-        const avatarBg = color[i]
+    for (let i = 0; i < contactsJson.length; i++) {
+        c = i % color.length;
+        const avatarBg = color[c];
         contactColorsMap.set(contactsJson[i].fullName, avatarBg);
     }
-
 
     let bgColor = contactColorsMap.get(name);
     document.getElementById(idName).style.backgroundColor = `${bgColor}`;
@@ -335,7 +334,7 @@ function renderCategory(category, id) {
 async function deleteBoardTask(id) {
     allTasks.splice(id, 1);
     generateIDs();
-    setTasksStorage();
+    await setTasksStorage();
     renderBoard();
 }
 

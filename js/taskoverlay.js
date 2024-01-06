@@ -29,6 +29,7 @@ function renderAssignedTo(idFromTask, idOfContainer) {
         } else {
             renderSingleName(idOfContainer, j, firstNameCharacter, fullname)
         }
+        //renderCardContacts(fullname, `assignedContact${j}`);
     }
 }
 
@@ -259,10 +260,10 @@ function renderEditContent(idFromTask) {
  * closes the edit option and renders the taskoverlay
  * @param {integer} idFromTask 
  */
-function closeEditContent(idFromTask) {
-    saveEditChanges(idFromTask);
+async function closeEditContent(idFromTask) {
+    await saveEditChanges(idFromTask);
+    await loadTasksFromStorage();
     openDialog('dialogShowCard', 'taskOverlay');
-    loadTasksFromStorage();
     renderBoardTaskOverlay(idFromTask);
 }
 
@@ -270,7 +271,7 @@ function closeEditContent(idFromTask) {
  * saves the changes that are done into the edit form
  * @param {integer} idFromTask 
  */
-function saveEditChanges(idFromTask) {
+async function saveEditChanges(idFromTask) {
     let actuellyTask = allTasks[idFromTask]
     actuellyTask['title'] = document.getElementById('addTaskInputTitle').value
     actuellyTask['description'] = document.getElementById('addTaskTextArea').value
@@ -279,7 +280,7 @@ function saveEditChanges(idFromTask) {
     actuellyTask['prio'] = prioLabel;
     pushEditSubtasks(idFromTask);
     pushEditAssignedTo(idFromTask);
-    setTasksStorage();
+    await setTasksStorage();
 }
 
 /**
@@ -303,7 +304,7 @@ function renderAssignedToEditBoard(idFromTask) {
  * pushs the assignedto conatcs into the array from add task, so that they're work with the same array
  * @param {integer} idFromTask 
  */
-function pushEditAssignedTo(idFromTask) {
+async function pushEditAssignedTo(idFromTask) {
 
     let assignedTo = allTasks[idFromTask]['assignedTo']
 
@@ -315,7 +316,7 @@ function pushEditAssignedTo(idFromTask) {
         assignedTo.push(contact)
     }
     allTasks[idFromTask]['assignedTo'] = assignedTo
-    setTasksStorage();
+    await setTasksStorage();
 }
 
 /**
@@ -360,7 +361,7 @@ function renderEditSubtasksInTask(actuellyTask) {
 * pushs the current subtasks into the same array from add task, so that they're work with the same array
  * @param {integer} idFromTask 
  */
-function pushEditSubtasks(idFromTask) {
+async function pushEditSubtasks(idFromTask) {
 
     let subtasks = allTasks[idFromTask]['subtasks']
     subtasks = [];
@@ -372,7 +373,7 @@ function pushEditSubtasks(idFromTask) {
 
     subtasksList = [];
     allTasks[idFromTask]['subtasks'] = subtasks;
-    setTasksStorage();
+    await setTasksStorage();
 }
 
 
