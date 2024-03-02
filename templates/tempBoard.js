@@ -129,8 +129,10 @@ function renderCardHtml(todo) {
                 <div id="category${todo['id']}" class="category">
                     ${todo['category']}
                 </div>
-                <div class="changeStatus" id="openPopUp${idFromTask}" onclick="doNotClose(event);togglePopup(${idFromTask})">
+                <div class="changeStatus" id="openPopUp${idFromTask}" onclick="doNotClose(event)">
+                <div onclick="togglePopup(${idFromTask})">
                     ...
+                </div>
                 </div>
             </div>
       

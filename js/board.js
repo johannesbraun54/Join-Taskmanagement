@@ -263,11 +263,20 @@ async function closeDialog(id, idOfSlideConti) {
  */
 function togglePopup(idFromTask) {
     let popup = document.getElementById(`changeStatusPopUp${idFromTask}`);
+   
+    document.addEventListener('click', function(event){
+        if(popup && !popup.contains(event.target)){
+            popup.style.display = 'none';
+        }
+    })
+
     if (popup.style.display === 'none' || popup.style.display === '') {
         popup.style.display = 'block';
     } else {
         popup.style.display = 'none';
     }
+
+
 }
 
 /**
