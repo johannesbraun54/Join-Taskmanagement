@@ -212,6 +212,9 @@
 
 
 .dialogAddTaskBoard {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     border-radius: 24px;
     width: 80vw;
     height: 90vh;
