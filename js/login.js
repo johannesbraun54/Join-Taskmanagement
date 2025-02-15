@@ -67,13 +67,14 @@ function checkUser(email, password) {
  */
 
 function login() {
-    if (!validateEmail() || !validatePassword()) {
-        return false;
-    }
+    console.log(users)
+    // if (!validateEmail() || !validatePassword()) {
+    //     return false;
+    // }
 
-    let email = document.getElementById("loginMailInput").value;
-    let password = document.getElementById("loginPasswordInput").value;
-    return checkUser(email, password);
+    // let email = document.getElementById("loginMailInput").value;
+    // let password = document.getElementById("loginPasswordInput").value;
+    // return checkUser(email, password);
 }
 
 /**

@@ -1,5 +1,12 @@
 let users = []
 
+
+function setUserAtStorage(){
+    return fetch(
+        
+    )
+}
+
 /**
  * This function is used to initialize the registration process
  *  by invoking the loadUsers function
