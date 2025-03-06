@@ -22,6 +22,10 @@
     justify-content: center;
 }
 
+.boardContent{
+    width: 100%;
+}
+
 .board {
     box-sizing: border-box;
     display: flex;
