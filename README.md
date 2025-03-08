@@ -1,30 +1,30 @@
 # Join Taskmanagement
 
-Join Taskmanagement ist ein einfaches und benutzerfreundliches Tool zur Verwaltung von Aufgaben und Projekten. Es hilft Teams dabei, ihre Aufgaben effizient zu organisieren und sicherzustellen, dass alle Beteiligten auf dem gleichen Stand sind. Das System ermöglicht die Erstellung und Verwaltung von Aufgaben, die verschiedenen Benutzern zugewiesen werden können.
+Join Taskmanagement is a simple and user-friendly task and project management tool. It helps teams organize their tasks efficiently and ensures everyone is on the same page. The system allows the creation and management of tasks, which can be assigned to different users.
 
 ## Features
 
-- Erstelle und verwalte Aufgaben.
-- Weise Aufgaben verschiedenen Benutzern zu.
-- Einfaches, benutzerfreundliches Interface.
-- Keine komplexe Installation erforderlich.
+- Create and manage tasks.
+- Assign tasks to different users.
+- Simple and user-friendly interface.
+- No complex installation required.
 
 ## Installation
 
-1. Klone das Repository:
+1. Clone the repository:
     ```bash
     git clone https://github.com/johannesbraun54/Join-Taskmanagement.git
     ```
 
-2. Öffne die `index.html` Datei in deinem Browser, um das Projekt zu starten.
+2. Open the `index.html` file in your browser to start the project.
 
-## Nutzung
+## Usage
 
-1. Öffne die `index.html` Datei im Webbrowser.
-2. Erstelle Aufgaben, weise sie zu und behalte den Überblick über den Fortschritt.
-3. Verwende das einfache Interface, um Aufgaben zu verwalten.
+1. Open the `index.html` file in your browser.
+2. Create tasks, assign them, and track progress.
+3. Use the simple interface to manage tasks.
 
-## Technologien
+## Technologies
 
 - HTML
 - CSS
@@ -32,12 +32,12 @@ Join Taskmanagement ist ein einfaches und benutzerfreundliches Tool zur Verwaltu
 
 ## Contributing
 
-Beiträge sind willkommen! Forke das Repository, erstelle einen neuen Branch, nimm Änderungen vor und öffne einen Pull Request.
+Contributions are welcome! Fork the repository, create a new branch, make changes, and open a pull request.
 
-## Lizenz
+## License
 
-Dieses Projekt steht unter der MIT Lizenz - siehe die [LICENSE](LICENSE) Datei für Details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Support
 
-Für Fragen oder Unterstützung, öffne ein Issue auf GitHub.
+For questions or support, please open an issue on GitHub.
